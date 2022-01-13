@@ -75,9 +75,9 @@
 - [Data Structures & Algorithms in Swift By Vincent Ngo & Kelvin Lau](https://www.raywenderlich.com/books/data-structures-algorithms-in-swift)
 
 ### 📚 목차
-- ### Stack
-- ### Linked Lists
-- ### Queues
-- ### Trees
-- ### Binary Trees
-- ### Heaps
+- Stack
+- Linked Lists
+- Queues
+- Trees
+- Binary Trees
+- Heaps
