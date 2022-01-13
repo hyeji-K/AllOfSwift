@@ -2,7 +2,7 @@
 
 
 
-## Swift 문법 스터디
+## [Swift 문법 스터디](https://github.com/hyeji-K/AllOfSwift/tree/main/SwiftStudy)
 
 ### 📌 목표 
 - 스위프트 기초 문법에 대해 학습하고 정리합니다.
@@ -61,3 +61,23 @@
 
 </div>
 </details>
+
+
+</dr>
+
+
+## Data Structures & Algorithms
+
+### 📌 목표 
+- 자료구조의 목적과 이론을 이해하고 구현해봅니다.
+
+### 📕 참고 
+- [Data Structures & Algorithms in Swift By Vincent Ngo & Kelvin Lau](https://www.raywenderlich.com/books/data-structures-algorithms-in-swift)
+
+### 📚 목차
+- ### Stack
+- ### Linked Lists
+- ### Queues
+- ### Trees
+- ### Binary Trees
+- ### Heaps
