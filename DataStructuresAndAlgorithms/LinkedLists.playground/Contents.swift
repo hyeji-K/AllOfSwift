@@ -80,3 +80,44 @@ let ParicularRemovedValue = particularRemoveList.remove(after: node)
 
 print("After removing at index \(index): \(particularRemoveList)")
 print("Removed value: " + String(describing: ParicularRemovedValue))
+
+// using collection
+var collectionList = LinkedList<Int>()
+for i in 0...9 {
+    collectionList.append(i)
+}
+
+print("list: \(collectionList)")
+print("First element: \(collectionList[list.startIndex])")
+print("Array containing first 3 elements: \(Array(collectionList.prefix(3)))")
+print("Array containing last 3 elements: \(Array(collectionList.suffix(3)))")
+
+let sum = collectionList.reduce(0, +)
+print("Sum of all values: \(sum)")
+
+
+// array cow
+let array1 = [1, 2]
+var array2 = array1
+
+print("array1: \(array1)")
+print("array2: \(array2)")
+
+print("---After adding 3 to array 2---")
+array2.append(3)
+print("array1: \(array1)")
+print("array2: \(array2)")
+
+
+// linked list cow
+var list1 = LinkedList<Int>()
+list1.append(1)
+list1.append(2)
+var list2 = list1
+print("list1: \(list1)")
+print("list2: \(list2)")
+
+print("After appending 3 to list2")
+list2.append(3)
+print("list1: \(list1)")
+print("list2: \(list2)")

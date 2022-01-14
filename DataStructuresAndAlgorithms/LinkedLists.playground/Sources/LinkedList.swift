@@ -11,6 +11,7 @@ public struct LinkedList<Value> {
     }
     
     public mutating func push(_ value: Value) {
+        copyNodes()
         head = Node(value: value, next: head)
         if tail == nil {
             tail = head
@@ -18,6 +19,7 @@ public struct LinkedList<Value> {
     }
     
     public mutating func append(_ value: Value) {
+        copyNodes()
         
         // 1
         guard !isEmpty else {
@@ -48,6 +50,7 @@ public struct LinkedList<Value> {
     
     @discardableResult
     public mutating func insert(_ value: Value, after node: Node<Value>) -> Node<Value> {
+        copyNodes()
         guard tail !== node else {
             append(value)
             return tail!
@@ -59,6 +62,7 @@ public struct LinkedList<Value> {
     
     @discardableResult
     public mutating func pop() -> Value? {
+        copyNodes()
         defer {
             head = head?.next
             if isEmpty {
@@ -70,6 +74,7 @@ public struct LinkedList<Value> {
     
     @discardableResult
     public mutating func removeLast() -> Value? {
+        copyNodes()
         guard let head = head else {
             return nil
         }
@@ -93,6 +98,7 @@ public struct LinkedList<Value> {
     
     @discardableResult
     public mutating func remove(after node: Node<Value>) -> Value? {
+        copyNodes()
         defer {
             if node.next === tail {
                 tail = node
@@ -109,5 +115,65 @@ extension LinkedList: CustomStringConvertible {
             return "Empty list"
         }
         return String(describing: head)
+    }
+}
+
+extension LinkedList: Collection {
+    
+    public struct Index: Comparable {
+        
+        public var node: Node<Value>?
+        
+        static public func == (lhs: Index, rhs: Index) -> Bool {
+            switch (lhs.node, rhs.node) {
+            case let (left?, right?):
+                return left.next === right.next
+            case (nil, nil):
+                return true
+            default:
+                return false
+            }
+        }
+        
+        static public func <(lhs: Index, rhs: Index) -> Bool {
+            guard lhs != rhs else {
+                return false
+            }
+            let nodes = sequence(first: lhs.node) { $0?.next }
+            return nodes.contains { $0 === rhs.node }
+        }
+    }
+    
+    public var startIndex: Index {
+        Index(node: head)
+    }
+    
+    public var endIndex: Index {
+        Index(node: tail?.next)
+    }
+    
+    public func index(after i: Index) -> Index {
+        Index(node: i.node?.next)
+    }
+    
+    public subscript(position: Index) -> Value {
+        position.node!.value
+    }
+    
+    private mutating func copyNodes() {
+        guard var oldNode = head else {
+            return
+        }
+        
+        head = Node(value: oldNode.value)
+        var newNode = head
+        
+        while let nextOldNode = oldNode.next {
+            newNode!.next = Node(value: nextOldNode.value)
+            newNode = newNode!.next
+            oldNode = nextOldNode
+        }
+        
+        tail = newNode
     }
 }
