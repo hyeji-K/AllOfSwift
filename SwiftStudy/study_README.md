@@ -22,8 +22,8 @@
 - ### PART II 객체지향 프로그래밍과 스위프트
     - [9장 구조체와 클래스](https://hyejikim.notion.site/9-9126d5e521ce4eeda83184856349399c)
     - [10장 프로퍼티와 메서드](https://hyejikim.notion.site/10-2d7df9168b724dd386e63dd25a49afa0)
-    - 11장 인스턴스 생성 및 소멸
-    - 12장 접근제어
+    - [11장 인스턴스 생성 및 소멸](https://hyejikim.notion.site/11-5c2a8daadc3343609aa1db250a2e6086)
+    - [12장 접근제어](https://hyejikim.notion.site/12-9c2a06c2a6bb4ff5ab5bc7eeaff33db2)
 
 
 - ### PART III 함수형 프로그래밍과 스위프트
