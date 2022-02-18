@@ -59,6 +59,10 @@
     - 29장 메모리 안전
     - 30장 불명확 타입
 
+
+- ### 그 외
+    - [동시성(Concurrency)](https://github.com/hyeji-K/AllOfSwift/blob/main/SwiftStudy/Document/Concurrency.md)
+
 </div>
 </details>
 
