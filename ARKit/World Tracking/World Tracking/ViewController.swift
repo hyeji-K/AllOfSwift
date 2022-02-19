@@ -21,49 +21,39 @@ class ViewController: UIViewController {
     }
 
     @IBAction func add(_ sender: Any) {
-//        let cylinderNode = SCNNode(geometry: SCNCylinder(radius: 0.05, height: 0.05))
-        let boxNode = SCNNode(geometry: SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0))
-        let doorNode = SCNNode(geometry: SCNPlane(width: 0.03, height: 0.06))
-//        cylinderNode.geometry?.firstMaterial?.diffuse.contents = UIColor.red
-        boxNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
-        doorNode.geometry?.firstMaterial?.diffuse.contents = UIColor.brown
+////        let pyramid = SCNNode(geometry: SCNPyramid(width: 0.1, height: 0.1, length: 0.1))
+////        let pyramid = SCNNode(geometry: SCNPlane(width: 0.3, height: 0.3))
+//        let cylinder = SCNNode(geometry: SCNCylinder(radius: 0.1, height: 0.15))
+//        cylinder.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
+//        cylinder.position = SCNVector3(0, 0, -0.3)
+//        // rotation y
+//        cylinder.eulerAngles = SCNVector3(0, 0, Float(90.degreesToRadians))
+//        self.sceneView.scene.rootNode.addChildNode(cylinder)
+//
+//        let pyramid = SCNNode(geometry: SCNPyramid(width: 0.1, height: 0.1, length: 0.1))
+//        pyramid.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+//        pyramid.position = SCNVector3(0, 0, -0.5)
+//        cylinder.addChildNode(pyramid)
         let node = SCNNode()
-//        node.geometry = SCNCapsule(capRadius: 0.1, height: 0.3)
-//        node.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.03)
-//        node.geometry = SCNCone(topRadius: 0.3, bottomRadius: 0.3, height: 0.3)
-//        node.geometry = SCNCylinder(radius: 0.2, height: 0.2)
-//        node.geometry = SCNSphere(radius: 0.1)
-//        node.geometry = SCNTube(innerRadius: 0.2, outerRadius: 0.3, height: 0.5)
-//        node.geometry = SCNTorus(ringRadius: 0.3, pipeRadius: 0.1)
-//        node.geometry = SCNPlane(width: 0.2, height: 0.2)
-//        let path = UIBezierPath()
-//        path.move(to: CGPoint(x: 0, y: 0))
-//        path.addLine(to: CGPoint(x: -0.2, y: 0.2))
-//        path.addLine(to: CGPoint(x: 0, y: 0.4))
-//        path.addLine(to: CGPoint(x: 0, y: 0.7))
-//        path.addLine(to: CGPoint(x: 0.2, y: 0.4))
-//        path.addLine(to: CGPoint(x: 0.4, y: 0.4))
-//        path.addLine(to: CGPoint(x: 0.6, y: 0.7))
-//        path.addLine(to: CGPoint(x: 0.6, y: 0.4))
-//        path.addLine(to: CGPoint(x: 0.8, y: 0.2))
-//        path.addLine(to: CGPoint(x: 0.6, y: 0))
-//        let shape = SCNShape(path: path, extrusionDepth: 0.2)
-//        node.geometry = shape
         node.geometry = SCNPyramid(width: 0.1, height: 0.1, length: 0.1)
         node.geometry?.firstMaterial?.specular.contents = UIColor.orange
         node.geometry?.firstMaterial?.diffuse.contents = UIColor.red
-//        let x = randomNumbers(firstNum: -0.3, secondNum: 0.3)
-//        let y = randomNumbers(firstNum: -0.3, secondNum: 0.3)
-//        let z = randomNumbers(firstNum: -0.3, secondNum: 0.3)
+//        node.eulerAngles = SCNVector3(Float(90.degreesToRadians), 0, 0)
         node.position = SCNVector3(0.2, 0.3, -0.2)
-//        cylinderNode.position = SCNVector3(-0.3, 0.2, -0.3)
-        boxNode.position = SCNVector3(0, -0.05, 0)
-        doorNode.position = SCNVector3(0, -0.02, 0.053)
+        node.eulerAngles = SCNVector3(Float(180.degreesToRadians), 0, 0)
         self.sceneView.scene.rootNode.addChildNode(node)
-//        self.sceneView.scene.rootNode.addChildNode(cylinderNode)
-//        node.addChildNode(cylinderNode)
+        
+        let boxNode = SCNNode(geometry: SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0))
+        boxNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
+        boxNode.position = SCNVector3(0, -0.05, 0)
         node.addChildNode(boxNode)
+        
+        let doorNode = SCNNode(geometry: SCNPlane(width: 0.03, height: 0.06))
+        doorNode.geometry?.firstMaterial?.diffuse.contents = UIColor.brown
+        doorNode.position = SCNVector3(0, -0.2, 0.053)
         boxNode.addChildNode(doorNode)
+        
+        
     }
     
     @IBAction func reset(_ sender: Any) {
@@ -83,3 +73,6 @@ class ViewController: UIViewController {
     
 }
 
+extension Int {
+    var degreesToRadians: Double { return Double(self) * .pi/180 }
+}
