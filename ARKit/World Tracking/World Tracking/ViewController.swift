@@ -21,6 +21,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func add(_ sender: Any) {
+//        let cylinderNode = SCNNode(geometry: SCNCylinder(radius: 0.05, height: 0.05))
+        let boxNode = SCNNode(geometry: SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0))
+        let doorNode = SCNNode(geometry: SCNPlane(width: 0.03, height: 0.06))
+//        cylinderNode.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+        boxNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
+        doorNode.geometry?.firstMaterial?.diffuse.contents = UIColor.brown
         let node = SCNNode()
 //        node.geometry = SCNCapsule(capRadius: 0.1, height: 0.3)
 //        node.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.03)
@@ -30,27 +36,34 @@ class ViewController: UIViewController {
 //        node.geometry = SCNTube(innerRadius: 0.2, outerRadius: 0.3, height: 0.5)
 //        node.geometry = SCNTorus(ringRadius: 0.3, pipeRadius: 0.1)
 //        node.geometry = SCNPlane(width: 0.2, height: 0.2)
-//        node.geometry = SCNPyramid(width: 0.1, height: 0.1, length: 0.1)
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: 0, y: 0))
-        path.addLine(to: CGPoint(x: -0.2, y: 0.2))
-        path.addLine(to: CGPoint(x: 0, y: 0.4))
-        path.addLine(to: CGPoint(x: 0, y: 0.7))
-        path.addLine(to: CGPoint(x: 0.2, y: 0.4))
-        path.addLine(to: CGPoint(x: 0.4, y: 0.4))
-        path.addLine(to: CGPoint(x: 0.6, y: 0.7))
-        path.addLine(to: CGPoint(x: 0.6, y: 0.4))
-        path.addLine(to: CGPoint(x: 0.8, y: 0.2))
-        path.addLine(to: CGPoint(x: 0.6, y: 0))
-        let shape = SCNShape(path: path, extrusionDepth: 0.2)
-        node.geometry = shape
+//        let path = UIBezierPath()
+//        path.move(to: CGPoint(x: 0, y: 0))
+//        path.addLine(to: CGPoint(x: -0.2, y: 0.2))
+//        path.addLine(to: CGPoint(x: 0, y: 0.4))
+//        path.addLine(to: CGPoint(x: 0, y: 0.7))
+//        path.addLine(to: CGPoint(x: 0.2, y: 0.4))
+//        path.addLine(to: CGPoint(x: 0.4, y: 0.4))
+//        path.addLine(to: CGPoint(x: 0.6, y: 0.7))
+//        path.addLine(to: CGPoint(x: 0.6, y: 0.4))
+//        path.addLine(to: CGPoint(x: 0.8, y: 0.2))
+//        path.addLine(to: CGPoint(x: 0.6, y: 0))
+//        let shape = SCNShape(path: path, extrusionDepth: 0.2)
+//        node.geometry = shape
+        node.geometry = SCNPyramid(width: 0.1, height: 0.1, length: 0.1)
         node.geometry?.firstMaterial?.specular.contents = UIColor.orange
-        node.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
+        node.geometry?.firstMaterial?.diffuse.contents = UIColor.red
 //        let x = randomNumbers(firstNum: -0.3, secondNum: 0.3)
 //        let y = randomNumbers(firstNum: -0.3, secondNum: 0.3)
 //        let z = randomNumbers(firstNum: -0.3, secondNum: 0.3)
-        node.position = SCNVector3(0, 0, -0.3)
+        node.position = SCNVector3(0.2, 0.3, -0.2)
+//        cylinderNode.position = SCNVector3(-0.3, 0.2, -0.3)
+        boxNode.position = SCNVector3(0, -0.05, 0)
+        doorNode.position = SCNVector3(0, -0.02, 0.053)
         self.sceneView.scene.rootNode.addChildNode(node)
+//        self.sceneView.scene.rootNode.addChildNode(cylinderNode)
+//        node.addChildNode(cylinderNode)
+        node.addChildNode(boxNode)
+        boxNode.addChildNode(doorNode)
     }
     
     @IBAction func reset(_ sender: Any) {

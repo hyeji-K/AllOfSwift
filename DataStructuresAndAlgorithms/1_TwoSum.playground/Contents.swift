@@ -89,3 +89,23 @@ class Solution {
         
     }
 }
+
+func longestCommonPrefix(_ strs: [String]) -> String {
+    // 앞 글자 비교
+    // 문자를 하나하나 나눠서 비교해야하는가?
+
+    return ""
+}
+
+let str = "flow"
+print(str.max())
+
+//func longestCommonPrefix(_ strs: [String]) -> String {
+//    guard var `prefix` = strs.min() else { return "" }
+//    while `prefix`.isEmpty == false {
+//        if strs.allSatisfy({ $0.hasPrefix(`prefix`) }) { break }
+//        `prefix`.removeLast()
+//    }
+//    return `prefix`
+//}
+
