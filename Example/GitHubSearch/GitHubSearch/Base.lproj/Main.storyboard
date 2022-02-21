@@ -59,7 +59,7 @@
         <!--Root View Controller-->
         <scene sceneID="0tI-Mn-oUa">
             <objects>
-                <tableViewController id="OkO-Ep-Ocp" customClass="AlamofireTableViewController" customModule="GitHubSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="OkO-Ep-Ocp" customClass="AlamoSwifyJSONTableViewController" customModule="GitHubSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="QSK-xl-FNm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
