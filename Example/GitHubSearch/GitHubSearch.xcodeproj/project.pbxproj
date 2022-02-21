@@ -14,6 +14,8 @@
 		10E07AEF27C22DD700478294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10E07AEE27C22DD700478294 /* Assets.xcassets */; };
 		10E07AF227C22DD700478294 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10E07AF027C22DD700478294 /* LaunchScreen.storyboard */; };
 		10E07AFA27C236E000478294 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E07AF927C236E000478294 /* SearchTableViewController.swift */; };
+		10E07AFC27C372D500478294 /* AlamofireTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E07AFB27C372D500478294 /* AlamofireTableViewController.swift */; };
+		10E07AFF27C3736000478294 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 10E07AFE27C3736000478294 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,7 @@
 		10E07AF127C22DD700478294 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10E07AF327C22DD700478294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10E07AF927C236E000478294 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		10E07AFB27C372D500478294 /* AlamofireTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10E07AFF27C3736000478294 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +66,7 @@
 				10E07AE727C22DD500478294 /* SceneDelegate.swift */,
 				10E07AE927C22DD500478294 /* ViewController.swift */,
 				10E07AF927C236E000478294 /* SearchTableViewController.swift */,
+				10E07AFB27C372D500478294 /* AlamofireTableViewController.swift */,
 				10E07AEB27C22DD500478294 /* Main.storyboard */,
 				10E07AEE27C22DD700478294 /* Assets.xcassets */,
 				10E07AF027C22DD700478294 /* LaunchScreen.storyboard */,
@@ -86,6 +91,9 @@
 			dependencies = (
 			);
 			name = GitHubSearch;
+			packageProductDependencies = (
+				10E07AFE27C3736000478294 /* Alamofire */,
+			);
 			productName = GitHubSearch;
 			productReference = 10E07AE227C22DD500478294 /* GitHubSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 10E07AD927C22DD500478294;
+			packageReferences = (
+				10E07AFD27C3736000478294 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 10E07AE327C22DD500478294 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,6 +155,7 @@
 				10E07AEA27C22DD500478294 /* ViewController.swift in Sources */,
 				10E07AE627C22DD500478294 /* AppDelegate.swift in Sources */,
 				10E07AE827C22DD500478294 /* SceneDelegate.swift in Sources */,
+				10E07AFC27C372D500478294 /* AlamofireTableViewController.swift in Sources */,
 				10E07AFA27C236E000478294 /* SearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		10E07AFD27C3736000478294 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		10E07AFE27C3736000478294 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10E07AFD27C3736000478294 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 10E07ADA27C22DD500478294 /* Project object */;
 }

@@ -1,80 +1,57 @@
 //
-//  SearchTableViewController.swift
+//  AlamofireTableViewController.swift
 //  GitHubSearch
 //
-//  Created by heyji on 2022/02/20.
+//  Created by heyji on 2022/02/21.
 //
 
 import UIKit
+import Alamofire
 
-class SearchTableViewController: UITableViewController, UISearchBarDelegate {
-
-    @IBOutlet var searchBar: UISearchBar!
-    
+class AlamofireTableViewController: UITableViewController {
     let accept = "application/vnd.github.v3+json"
-    var searchResult: [[String: Any]]?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
+        search(query: "Swift")
 
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let query = searchBar.text else { return }
-        search(query: query)
-        searchBar.resignFirstResponder()
     }
     
     func search(query: String) {
-        // using URLSession
-        let strURL = "https://api.github.com/search/repositories?q=\(query)+language:assembly&sort=stars&order=desc"
-        guard let url = URL(string: strURL) else { return }
-        var request = URLRequest(url: url)
-        request.addValue(accept, forHTTPHeaderField: "Accept")
-        request.httpMethod = "GET"
-        
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request) { data, response, error in
-            guard let data = data else { return }
-            do {
-                let dic = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                guard let dic = dic else { return }
-                self.searchResult = dic["items"] as? [[String: Any]]
-            } catch {
+        let strURL = "https://api.github.com/search/repositories"
+        let params: Parameters = ["q": query]
+        let headers: HTTPHeaders = ["Accept": accept]
+        let alamo = AF.request(strURL, method: .get, parameters: params, headers: headers)
+        // responseJSON : Alamofire6에서 deprecated
+        alamo.responseJSON { response in
+            switch response.result {
+            case .success(let data):
+                if let json = data as? [String: Any] {
+                    print(json)
+                }
+            case .failure(let error):
                 print(error.localizedDescription)
             }
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
         }
-        dataTask.resume()
     }
-    
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if let searchResult = searchResult {
-            return searchResult.count
-        }
         return 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        guard let searchResult = searchResult else {
-            return cell
-        }
-        let search = searchResult[indexPath.row]
-        cell.textLabel?.text = search["name"] as? String
-        // textLabel will be deprecated in a future version of iOS: Use UIListContentConfiguration
+
+        // Configure the cell...
 
         return cell
     }
