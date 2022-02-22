@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4i5-W3-tRa">
-                                <rect key="frame" x="174.5" y="797" width="65" height="45"/>
+                                <rect key="frame" x="20" y="797" width="65" height="45"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="Wy2-VY-MTP"/>
@@ -30,6 +30,19 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Draw"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="080-sp-wV4">
+                                <rect key="frame" x="329" y="797" width="65" height="45"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.43137254899999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="RrJ-MN-l39"/>
+                                    <constraint firstAttribute="width" constant="65" id="eyi-dY-oo9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Kj-LZ-ljw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -37,9 +50,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="86i-rV-KxO" secondAttribute="bottom" id="5Hj-A9-SDv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="86i-rV-KxO" secondAttribute="trailing" id="BUf-Jp-6S5"/>
                             <constraint firstItem="86i-rV-KxO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="F1v-wV-HeD"/>
-                            <constraint firstItem="4i5-W3-tRa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S2q-7e-M7w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="080-sp-wV4" secondAttribute="bottom" constant="20" id="GgG-dY-h7b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="080-sp-wV4" secondAttribute="trailing" constant="20" id="aVE-5u-16h"/>
                             <constraint firstItem="86i-rV-KxO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="b8i-yM-OsL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4i5-W3-tRa" secondAttribute="bottom" constant="20" id="qsA-Xp-rPs"/>
+                            <constraint firstItem="4i5-W3-tRa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uN7-Cz-FTU"/>
                         </constraints>
                     </view>
                     <connections>

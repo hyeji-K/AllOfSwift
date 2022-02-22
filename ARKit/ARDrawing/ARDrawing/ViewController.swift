@@ -54,6 +54,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }
 
+    @IBAction func reset(_ sender: Any) {
+        self.restartSession()
+    }
+    
+    func restartSession() {
+        self.sceneView.session.pause()
+        self.sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
+            node.removeFromParentNode()
+        }
+        self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+    }
 }
 
 func +(left: SCNVector3, right: SCNVector3) -> SCNVector3 {
