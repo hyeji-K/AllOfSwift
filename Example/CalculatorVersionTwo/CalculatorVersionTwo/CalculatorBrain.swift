@@ -7,11 +7,10 @@
 
 import Foundation
 // Model File
-// 모델 파일에는 절대로 UIKit을 불러오지 마라. 모델은 UI와 분리되어 있으니까
 
 class CalculatorBrain {
     // brain을 위한 데이터 구조
-    private var accumulator = 0.0
+    private var accumulator: Double = 0.0
     
     func setOperand(operand: Double) {
         accumulator = operand
@@ -38,14 +37,6 @@ class CalculatorBrain {
     }
     
     func performOperation(symbol: String) {
-//        switch symbol {
-//        case "π": accumulator = .pi
-//        case "√": accumulator = sqrt(÷accumulator)
-//        default: break
-//        }
-//        if let constant = operations[symbol] {
-//            accumulator = constant
-//        }
         if let operation = operations[symbol] {
             switch operation {
             case .Constant(let value):
