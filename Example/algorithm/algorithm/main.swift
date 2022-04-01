@@ -235,29 +235,5 @@
 //}
 
 
-let input = Int(readLine()!)!
 
-//for i in 1...input {
-//    if input != i {
-//        for _ in 1...input - i {
-//            print(" ", terminator: "")
-//        }
-//    }
-//    for _ in 1...i {
-//        print("*", terminator: "")
-//    }
-//    print("")
-//}
-
-for i in 1...input {
-    var total: String = ""
-    for j in 1...input {
-        if j <= input - i {
-            total += " "
-        } else {
-            total += "*"
-        }
-    }
-    print(total)
-}
 
