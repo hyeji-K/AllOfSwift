@@ -56,15 +56,23 @@
 		10E74E6D2839E8270030F9DF /* Smashtag */ = {
 			isa = PBXGroup;
 			children = (
-				10E74E6E2839E8270030F9DF /* AppDelegate.swift */,
-				10E74E702839E8270030F9DF /* SceneDelegate.swift */,
 				10E74E722839E8270030F9DF /* ViewController.swift */,
 				10E74E742839E8270030F9DF /* Main.storyboard */,
-				10E74E772839E8290030F9DF /* Assets.xcassets */,
-				10E74E792839E8290030F9DF /* LaunchScreen.storyboard */,
 				10E74E7C2839E8290030F9DF /* Info.plist */,
+				10E74E822839EB880030F9DF /* SupportingFiles */,
 			);
 			path = Smashtag;
+			sourceTree = "<group>";
+		};
+		10E74E822839EB880030F9DF /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				10E74E6E2839E8270030F9DF /* AppDelegate.swift */,
+				10E74E702839E8270030F9DF /* SceneDelegate.swift */,
+				10E74E772839E8290030F9DF /* Assets.xcassets */,
+				10E74E792839E8290030F9DF /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
