@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10FD30302861E4AE00B54066 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FD302F2861E4AE00B54066 /* main.swift */; };
+		10FD303228620C5200B54066 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FD303128620C5200B54066 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,7 +28,8 @@
 		10FD3027285DE66B00B54066 /* x만큼간격이있는n개의숫자.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "x만큼간격이있는n개의숫자.swift"; sourceTree = "<group>"; };
 		10FD3029285DEB8B00B54066 /* 행렬의덧셈.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "행렬의덧셈.swift"; sourceTree = "<group>"; };
 		10FD302D2861BFEA00B54066 /* 핸드폰번호가리기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "핸드폰번호가리기.swift"; sourceTree = "<group>"; };
-		10FD302F2861E4AE00B54066 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		10FD302F2861E4AE00B54066 /* 평균구하기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "평균구하기.swift"; sourceTree = "<group>"; };
+		10FD303128620C5200B54066 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +66,8 @@
 				10FD3027285DE66B00B54066 /* x만큼간격이있는n개의숫자.swift */,
 				10FD3029285DEB8B00B54066 /* 행렬의덧셈.swift */,
 				10FD302D2861BFEA00B54066 /* 핸드폰번호가리기.swift */,
-				10FD302F2861E4AE00B54066 /* main.swift */,
+				10FD302F2861E4AE00B54066 /* 평균구하기.swift */,
+				10FD303128620C5200B54066 /* main.swift */,
 			);
 			path = programmers;
 			sourceTree = "<group>";
@@ -129,7 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10FD30302861E4AE00B54066 /* main.swift in Sources */,
+				10FD303228620C5200B54066 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
