@@ -19,6 +19,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		106308A72887ED5A008BD835 /* 약수의개수와덧셈.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "약수의개수와덧셈.swift"; sourceTree = "<group>"; };
 		1078F6772869E9450060C837 /* 시저암호.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "시저암호.swift"; sourceTree = "<group>"; };
 		1078F679286ABA2F0060C837 /* 문자열다루기기본.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "문자열다루기기본.swift"; sourceTree = "<group>"; };
 		1078F683286C43F90060C837 /* 나머지가1이되는수찾기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "나머지가1이되는수찾기.swift"; sourceTree = "<group>"; };
@@ -138,6 +139,7 @@
 				1078F7AB288515CA0060C837 /* 음양더하기.swift */,
 				1078F7AF2886B6720060C837 /* 내적.swift */,
 				1078F7B12886B7A50060C837 /* 예산.swift */,
+				106308A72887ED5A008BD835 /* 약수의개수와덧셈.swift */,
 			);
 			path = programmers;
 			sourceTree = "<group>";
