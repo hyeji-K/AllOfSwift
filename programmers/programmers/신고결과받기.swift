@@ -85,3 +85,28 @@ func solution2(_ id_list: [String], _ report: [String], _ k: Int) -> [Int] {
     
     return arr
 }
+
+
+/* 해시 자료구조
+ reported : 유저별 신고당한 횟수 [신고당한 사람: 신고당한 횟수]
+ ["neo": 2, "muzi": 1, "frodo": 2]
+ user : 유저별 신고한 사람 [신고자: [신고당한 사람]]
+ ["apeach": ["frodo", "muzi"], "muzi": ["neo", "frodo"], "frodo": ["neo"]]
+ */
+
+func solution3(_ id_list:[String], _ report:[String], _ k:Int) -> [Int] {
+    var reported: [String: Int] = [:]
+    var user: [String: [String]] = [:]
+
+    for r in Set(report) {
+        let splited = r.split(separator: " ").map { String($0) }
+        user[splited[0]] = (user[splited[0]] ?? []) + [splited[1]]
+        reported[splited[1]] = (reported[splited[1]] ?? 0) + 1
+    }
+
+    return id_list.map { id in
+        return (user[id] ?? []).reduce(0) {
+            $0 + ((reported[$1] ?? 0) >= k ? 1 : 0)
+        }
+    }
+}
