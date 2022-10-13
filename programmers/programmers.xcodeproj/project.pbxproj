@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		103DA84628A3FD2D004FEA14 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103DA84528A3FD2D004FEA14 /* main.swift */; };
+=======
+		103DA79828A0DEE6004FEA14 /* 신규아이디추천.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103DA79728A0DEE6004FEA14 /* 신규아이디추천.swift */; };
+>>>>>>> e082a21ee6544064abeea5abd4746941104f39f9
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -165,7 +169,10 @@
 				103DA77F2897B91F004FEA14 /* 숫자문자열과영단어.swift */,
 				103DA795289B9C3A004FEA14 /* 신고결과받기.swift */,
 				103DA79728A0DEE6004FEA14 /* 신규아이디추천.swift */,
+<<<<<<< HEAD
 				103DA84528A3FD2D004FEA14 /* main.swift */,
+=======
+>>>>>>> e082a21ee6544064abeea5abd4746941104f39f9
 			);
 			path = programmers;
 			sourceTree = "<group>";
@@ -229,7 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				103DA84628A3FD2D004FEA14 /* main.swift in Sources */,
+=======
+				103DA79828A0DEE6004FEA14 /* 신규아이디추천.swift in Sources */,
+>>>>>>> e082a21ee6544064abeea5abd4746941104f39f9
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
