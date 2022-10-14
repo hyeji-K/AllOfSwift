@@ -17,6 +17,7 @@ class ReminderViewController: UICollectionViewController {
         }
     }
     var workingReminder: Reminder // 사용자가 저장 또는 삭제를 선택할 때까지 편집 내용을 저장합니다.
+    var isAddingNewReminder = false // 이 변수는 사용자가 새 미리 알림을 추가하거나 기존 알림을 보거나 편집하는지 여부를 나타냅니다.
     var onChange: (Reminder)->Void
     private var dataSource: DataSource!
     
@@ -53,7 +54,11 @@ class ReminderViewController: UICollectionViewController {
         if editing {
             prepareForEditing()
         } else {
-            prepareForViewing()
+            if !isAddingNewReminder {
+                prepareForViewing()
+            } else {
+                onChange(workingReminder)
+            }
         }
     }
     
