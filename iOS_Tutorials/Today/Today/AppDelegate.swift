@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = .todayPrimaryTint // 앱에 있는 모든 탐색 모음의 기본 모양을 변경
         UINavigationBar.appearance().backgroundColor = .todayNavigationBackground
         let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.configureWithOpaqueBackground() // 불투명 탐색 모음
+        navBarAppearance.configureWithOpaqueBackground() // 불투명 탐색 모음1
 //        navBarAppearance.configureWithTransparentBackground() // 반투명탐색모음
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
         return true
